@@ -6,9 +6,9 @@ import Home from './components/Home.vue';
 
 export const routes = [
 	{ path: '', component: Home },
-	{ path: '/user/:id', component: User, children: [
-		{ path: '/', component: Home },
-		{ path: '/:id', component: UserStart },
-		{ path: '/:id/edit', component: UserEdit }
+	{ path: '/user', component: User, children: [
+		{ path: '', component: UserStart },
+		{ path: ':id', component: UserDetail },
+		{ path: ':id/edit', component: UserEdit }
 	] },
 ];
